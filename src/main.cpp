@@ -472,7 +472,7 @@ int main(int argc, char **argv)
             break;
         }
 
-        // custom commands - focus control
+        // focus control
         case 21:
         {
             int focus_option;
@@ -526,6 +526,18 @@ int main(int argc, char **argv)
                     cout << "Invalid option. Please select 1-6." << endl;
                     break;
             }
+            break;
+        }
+
+        case 22:
+        {
+            dev->cameraSetWdrR(Device::DevWdrModeNone);
+            break;
+        }
+
+        case 23:
+        {
+            dev->cameraSetWdrR(Device::DevWhiteBalanceCloudy);
             break;
         }
 
